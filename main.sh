@@ -39,4 +39,4 @@ cd $root_path
 
 # Initialize npm
 npm init -y
-npm i jest
+npm i -D jest
