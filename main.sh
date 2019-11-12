@@ -21,7 +21,7 @@ touch $root_path/tests/index.test.js
 touch $root_path/README.md
 
 # Ignore files
-cat > $root_path/.gitignore<<EOF
+cat >> $root_path/.gitignore<<EOF
 .DS_Store
 .npmrc
 .env
