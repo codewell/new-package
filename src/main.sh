@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get path to this library source
-lib_path=$(dirname ${BASH_SOURCE[0]})
+lib_path=$(readlink $(dirname ${BASH_SOURCE[0]}))
 
 # Get path the script is called from
 call_folder=$(pwd)

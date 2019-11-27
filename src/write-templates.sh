@@ -2,7 +2,7 @@
 
 root_path=${1}
 package_name=${2}
-this_path=$(dirname ${BASH_SOURCE[0]})
+this_path=$(readlinnk $(dirname ${BASH_SOURCE[0]}))
 
 # Write all project templates
 cp $this_path/templates/index.js $root_path/
