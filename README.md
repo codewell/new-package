@@ -1,11 +1,13 @@
 # new-package
-CLI for package boilerplating
+CLI for npm package boilerplating
 
 ## Installation
 ```bash
 bash install.sh
 ```
 Will try to symlink this script to `~/bin/npkg`. And set permissions to execute the script.
+
+*You can put a copy of your `.npmrc` file in the `templates` folder. It will be ignored by git.*
 
 ### Additional config
 * `package.json` - Some fields in `package.json`, e.g. `license` and `name` needs to be updated to have the correct value for your package. 

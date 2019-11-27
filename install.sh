@@ -2,6 +2,9 @@
 
 # Install new package cli tool
 
-ln -s $(pwd)/main.sh ~/bin/npkg
+# Create the .npmrc if it does not exist
+touch ./src/templates/.npmrc
+
+ln -s $(pwd)/src/main.sh ~/bin/npkg
 
 chmod +x ~/bin/npkg
