@@ -8,6 +8,7 @@ this_path=$(dirname ${BASH_SOURCE[0]})
 cp $this_path/templates/index.js $root_path/
 cp $this_path/templates/rollup.config.js $root_path/
 cp $this_path/templates/.npmignore $root_path/
+cp $this_path/templates/.npmrc $root_path/
 
 # package.json
 cat > $root_path/package.json<<EOF
