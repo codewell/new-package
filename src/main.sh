@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get path to this library source
-this_path=$(dirname ${BASH_SOURCE[0]})
+this_path=$(dirname ${BASH_SOURCE})
 echo $this_path
 lib_path=$(readlink ${this_path})
 echo $lib_path
