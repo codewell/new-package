@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Get path to this library source
-this_path=$(dirname ${BASH_SOURCE})
-echo $this_path
+this_path=${BASH_SOURCE[0]}
 lib_path=$(readlink ${this_path})
-echo $lib_path
+lib_dir=$(dirname $lib_path)
+
 
 # Get path the script is called from
 call_folder=$(pwd)
@@ -21,10 +21,10 @@ package_name=${directory%.*}
 root_path=$call_folder/$package_name
 
 # Cretate package boilerplate
-bash $lib_path/create-boilerplate.sh $root_path
+bash $lib_dir/create-boilerplate.sh $root_path
 
 # Write template files
-bash $lib_path/write-templates.sh $root_path $package_name
+bash $lib_dir/write-templates.sh $root_path $lib_dir $package_name
 
 # Install dev dependencies
-bash $lib_path/install-dependencies.sh $root_path
+bash $lib_dir/install-dependencies.sh $root_path

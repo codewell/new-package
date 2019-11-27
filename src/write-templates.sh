@@ -1,14 +1,14 @@
 #!/bin/bash
 
 root_path=${1}
-package_name=${2}
-this_path=$(readlinnk $(dirname ${BASH_SOURCE[0]}))
+lib_dir=${2}
+package_name=${3}
 
 # Write all project templates
-cp $this_path/templates/index.js $root_path/
-cp $this_path/templates/rollup.config.js $root_path/
-cp $this_path/templates/.npmignore $root_path/
-cp $this_path/templates/.npmrc $root_path/
+cp $lib_dir/templates/index.js $root_path/
+cp $lib_dir/templates/rollup.config.js $root_path/
+cp $lib_dir/templates/.npmignore $root_path/
+cp $lib_dir/templates/.npmrc $root_path/
 
 # package.json
 cat > $root_path/package.json<<EOF
