@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 write_templates () {
+  echo "${this_dir}::${package_root}"
   # Write all project templates
-  cp "${this_dir}/templates/index.js" "${root_path}/"
-  cp "${this_dir}/templates/rollup.config.js" "${root_path}/"
-  cp "${this_dir}/templates/.npmignore" "${root_path}/"
-  cp "${this_dir}/templates/.npmrc" "${root_path}/"
+  cp "${this_dir}/templates/index.js" "${package_root}/"
+  cp "${this_dir}/templates/rollup.config.js" "${package_root}/"
+  cp "${this_dir}/templates/.npmignore" "${package_root}/"
+  cp "${this_dir}/templates/.npmrc" "${package_root}/"
 
   # package.json
-  cat > "${root_path}/package.json"<<EOF
+  cat > "${package_root}/package.json"<<EOF
   {
     "name": "@codewell/${package_name}",
     "version": "0.0.1",
@@ -31,12 +32,12 @@ write_templates () {
         "prettier --write",
         "git add"
       ]
-    },
+    }
   }
 EOF
 
   # .gitignore
-  cat >> "${root_path}/.gitignore"<<EOF
+  cat >> "${package_root}/.gitignore"<<EOF
   # Mac specific
   .DS_Store
 
@@ -52,7 +53,7 @@ EOF
   codewell_package="@codewell/${package_name}"
 
   # README
-  cat >> "${root_path}/README.md"<<EOF
+  cat >> "${package_root}/README.md"<<EOF
   # ${codewell_package}
 
   ## Installation
