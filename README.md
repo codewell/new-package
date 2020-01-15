@@ -1,11 +1,12 @@
 # new-package
-CLI for npm package boilerplating
+Command Line Interface for npm package boilerplating
 
 ## Installation
+1. Get compy of the code. E.g. clone or download.
+2. Run
 ```bash
-bash install.sh
+make install
 ```
-Will try to symlink this script to `~/bin/npkg`. And set permissions to execute the script.
 
 *You can put a copy of your npm auth token in the `.npmrc` file in the `templates` folder. It will be ignored by git.*
 
