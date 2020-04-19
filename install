@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+echo "#!/usr/bin/env bash" > "${HOME}/bin/npkg"
+echo "set -o errexit -o pipefail -o nounset" >> "${HOME}/bin/npkg"
+
+echo "$(pwd)/src/main.sh \${1}" >> "${HOME}/bin/npkg"
+
+chmod +x "${HOME}/bin/npkg"

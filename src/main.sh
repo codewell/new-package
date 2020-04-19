@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
 
 # The first argument to the cli
 # should be a github repo url
