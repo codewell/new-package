@@ -21,10 +21,9 @@ cat > "${package_root}/package.json"<<EOF
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "rollup --config",
-    "release": "npm run build:dev && npm run build:prod",
-    "build:prod": "NODE_ENV=production rollup -c",
-    "build:dev": "NODE_ENV=development rollup -c",
+    "build": "npm run build:dev && npm run build:prod",
+    "build:prod": "NODE_ENV=production rollup --config",
+    "build:dev": "NODE_ENV=development rollup --config",
     "dry-release": "npm run release && npm pack"
   },
   "husky": {
