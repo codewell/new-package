@@ -8,7 +8,6 @@ create_boilerplate () {
 
   # Create boilerplate files
   touch "${package_root}/src/index.js"
-  touch "${package_root}/tests/index.test.js"
 
   # Create readme if it does not exist
   touch "${package_root}/README.md"

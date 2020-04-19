@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+cat <<EOF
+New package
+===========
+Create a new package boilerplate for 
+@codewell npm packages.
+
+Installation:
+  Run: ./install
+
+Usage:
+  Run: npkg <github-repo-clone-url>
+
+Remove installation:
+  Run: ./uninstall
+EOF 
